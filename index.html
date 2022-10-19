@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="index.css" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<article class="calculator">
+  <main aria-description="Calculator output" class="output" id="calculator-output">
+    0
+  </main>
+
+  <section aria-description="Function inputs" class="function-buttons">
+    <button type="button" class="button function-button" onclick="ioCalc.reset()">AC</button>
+    <button type="button" class="button function-button" disabled>+/-</button>
+    <button type="button" class="button function-button" disabled>%</button>
+  </section>
+
+  <section aria-description="Numeric inputs" class="numeric-buttons">
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('7')">7</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('8')">8</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('9')">9</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('4')">4</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('5')">5</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('6')">6</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('1')">1</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('2')">2</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('3')">3</button>
+  </section>
+
+  <section aria-description="0 and decimal button" class="numeric-buttons-last-row">
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('0')">0</button>
+    <button type="button" class="button number-button" onclick="ioCalc.inputNumeric('.')">.</button>
+  </section>
+
+  <section aria-description="Operation inputs" class="operation-buttons">
+    <button type="button" class="button operation-button" onclick="ioCalc.inputOperation('/')">÷</button>
+    <button type="button" class="button operation-button" onclick="ioCalc.inputOperation('*')">×</button>
+    <button type="button" class="button operation-button" onclick="ioCalc.inputOperation('-')">-</button>
+    <button type="button" class="button operation-button" onclick="ioCalc.inputOperation('+')">+</button>
+  </section>
+
+  <section aria-description="Compute" class="compute-buttons">
+    <button type="button" class="button compute-button" onclick="ioCalc.outputResult()">=</button>
+  </section>
+</article>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
